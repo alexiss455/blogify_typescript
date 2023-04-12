@@ -15,6 +15,13 @@ interface classPorps {
 const Loing: React.FC<classPorps> = (props) => {
   const [hide, setHide] = useState(false);
 
+const google = () =>{
+  window.open("http://localhost:3000/auth/google", "_self")
+}
+const github = () =>{
+  window.open("http://localhost:3000/auth/github", "_self")
+}
+
   return (
     <div
       className={`${props.className} w-full h-screen absolute left-0 top-0 flex items-center justify-center`}
@@ -24,7 +31,7 @@ const Loing: React.FC<classPorps> = (props) => {
         className={`${props.className1} overflow-hidden duration-500  bg-white shadow-2xl rounded-md `}
       >
         <div className="flex flex-col gap-y-4 px-6 pt-6">
-          <div className="active:scale-75 duration-500 flex items-center justify-center gap-x-8 bg-red-700 text-white p-2 rounded-md cursor-pointer">
+          <div onClick={google} className="active:scale-75 duration-500 flex items-center justify-center gap-x-8 bg-red-700 text-white p-2 rounded-md cursor-pointer">
             <FontAwesomeIcon icon={faGoogle} className="text-3xl" />
             <span className="whitespace-nowrap ">Continue with Google</span>
           </div>
@@ -32,7 +39,7 @@ const Loing: React.FC<classPorps> = (props) => {
             <FontAwesomeIcon icon={faTwitter} className="text-3xl" />
             <span className="whitespace-nowrap">Continue with Twitter</span>
           </div>
-          <div className="active:scale-75 duration-500 flex items-center   justify-center gap-x-8  bg-neutral-900 text-white p-2 rounded-md cursor-pointer">
+          <div onClick={github} className="active:scale-75 duration-500 flex items-center   justify-center gap-x-8  bg-neutral-900 text-white p-2 rounded-md cursor-pointer">
             <FontAwesomeIcon icon={faGithub} className="text-3xl" />
             <span className="whitespace-nowrap">Continue with Github</span>
           </div>

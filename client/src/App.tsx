@@ -22,7 +22,7 @@ function App() {
       <Header handleClick={() => setOpen((preValue) => !preValue)} />
       <Logs
         outSide={outSide}
-        className={`${open ? "" : "backdrop-blur-sm z-[100]"}`}
+        className={`${open ? "-z-50" : "backdrop-blur-sm z-[100]"}`}
         className1={`${open === true ? "-translate-y-[1000px]" : ""}`}
       />
 
