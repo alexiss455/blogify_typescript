@@ -18,7 +18,7 @@ function App() {
     };
   }, []);
   return (
-    <div className="max-w-screen-lg mx-auto">
+    <div className="max-w-screen-lg mx-auto max-lg:px-6">
       <Header handleClick={() => setOpen((preValue) => !preValue)} />
       <Logs
         outSide={outSide}

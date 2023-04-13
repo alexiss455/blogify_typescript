@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGoogle,
-  faTwitter,
+  faFacebook,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import Register from "./RegisterForm";
@@ -21,6 +21,9 @@ const google = () =>{
 const github = () =>{
   window.open("http://localhost:3000/auth/github", "_self")
 }
+const facebook = () =>{
+  window.open("http://localhost:3000/auth/facebook", "_self")
+}
 
   return (
     <div
@@ -35,9 +38,9 @@ const github = () =>{
             <FontAwesomeIcon icon={faGoogle} className="text-3xl" />
             <span className="whitespace-nowrap ">Continue with Google</span>
           </div>
-          <div className="active:scale-75 duration-500 flex items-center  justify-center  gap-x-8 bg-blue-600 text-white p-2 rounded-md cursor-pointer">
-            <FontAwesomeIcon icon={faTwitter} className="text-3xl" />
-            <span className="whitespace-nowrap">Continue with Twitter</span>
+          <div onClick={facebook} className="active:scale-75 duration-500 flex items-center  justify-center  gap-x-8 bg-blue-600 text-white p-2 rounded-md cursor-pointer">
+            <FontAwesomeIcon icon={faFacebook} className="text-3xl" />
+            <span className="whitespace-nowrap">Continue with Facebook</span>
           </div>
           <div onClick={github} className="active:scale-75 duration-500 flex items-center   justify-center gap-x-8  bg-neutral-900 text-white p-2 rounded-md cursor-pointer">
             <FontAwesomeIcon icon={faGithub} className="text-3xl" />
